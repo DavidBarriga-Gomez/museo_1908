@@ -66,4 +66,11 @@ class Curator
     end
     photo_nationality
   end
+
+  def load_photographs(file)
+    FileIO.load_photographs(file).each do |photo|
+      photo
+    binding.pry
+    end
+  end
 end

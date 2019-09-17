@@ -10,6 +10,8 @@ class FileIOTest < Minitest::Test
       artists: './data/artists.csv',
       photographs: './data/photographs.csv',
     }
+
+    @fileio = FileIO.from_csv(@locations)
   end
 
 

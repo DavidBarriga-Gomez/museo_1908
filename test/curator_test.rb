@@ -128,4 +128,8 @@ class CuratorTest < Minitest::Test
       @curator.add_photograph(@photo_4)
       assert_equal [@photo_2, @photo_3, @photo_4], @curator.photographs_taken_by_artist_from("United States")
     end
+
+    def test_method_load_photographs
+      @curator.load_photographs('./data/photographs.csv')
+    end
 end
