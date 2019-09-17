@@ -28,9 +28,26 @@ class Curator
     @photographs.each do |photo|
       if photo.id == id
         photograph_by_id = photo
-        # binding.pry
       end
     end
     photograph_by_id
+  end
+
+  def find_photographs_by_artist(artist)
+    photograph_collection = []
+      @photographs.each do |photo|
+        if photo.artist_id == artist.id
+          photograph_collection.push photo
+        end
+      end
+      photograph_collection
+  end
+
+  def artists_with_multiple_photographs
+    artist_num = []
+    if @photographs.each do |photo|
+      photo.artist_id < 1
+
+    end
   end
 end
