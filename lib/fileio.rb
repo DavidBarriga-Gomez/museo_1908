@@ -1,3 +1,5 @@
+# require_relative './artist'
+# require_relative './photograph'
 require 'csv'
 
 class FileIO

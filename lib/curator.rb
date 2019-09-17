@@ -1,3 +1,7 @@
+require './lib/artist'
+require './lib/photograph'
+require './lib/fileio'
+
 class Curator
   attr_reader :photographs, :artists
   def initialize
