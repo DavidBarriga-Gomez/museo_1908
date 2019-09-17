@@ -69,8 +69,9 @@ class Curator
 
   def load_photographs(file)
     FileIO.load_photographs(file).each do |photo|
-      photo
-    binding.pry
+      @photographs.push Photograph.new(photo)
+    # binding.pry
     end
+    @photographs
   end
 end

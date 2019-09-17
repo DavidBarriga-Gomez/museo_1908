@@ -36,6 +36,13 @@ class CuratorTest < Minitest::Test
         artist_id: "3",
         year: "1927"
       })
+      @photo_5 = Photograph.new(
+        {
+          id: "4",
+          name: "Child with Toy Hand Grenade in Central Park",
+          artist_id: "3",
+          year: "1962"
+        })
 
     @artist_1 = Artist.new(
       {
@@ -130,6 +137,7 @@ class CuratorTest < Minitest::Test
     end
 
     def test_method_load_photographs
-      @curator.load_photographs('./data/photographs.csv')
+      # @curator.load_photographs('./data/photographs.csv')
+      assert_equal [@photo_1, @photo_2, @photo_3, @photo_4], @curator.load_photographs('./data/photographs.csv')
     end
 end
