@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
 require './lib/photograph'
+require './lib/artist'
 
 class PhotographTest < Minitest::Test
   def setup
