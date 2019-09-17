@@ -126,6 +126,6 @@ class CuratorTest < Minitest::Test
       @curator.add_photograph(@photo_2)
       @curator.add_photograph(@photo_3)
       @curator.add_photograph(@photo_4)
-      assert_equal [@photo_2, @photo_3, @photo_4]
+      assert_equal [@photo_2, @photo_3, @photo_4], @curator.photographs_taken_by_artist_from("United States")
     end
 end

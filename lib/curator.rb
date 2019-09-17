@@ -52,4 +52,14 @@ class Curator
     end
     artists_multiple
   end
+
+  def photographs_taken_by_artist_from(country)
+    photo_nationality = []
+    @photographs.each do |photo|
+      if find_artist_by_id(photo.artist_id).country == country
+      photo_nationality.push photo
+      end
+    end
+    photo_nationality
+  end
 end
